@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登陆</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../stuff/img/myview.ico">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="../../stuff/libs/bootstrap/css/bootstrap.min.css">
+    <!--  my own style  -->
+    <link rel="stylesheet" href="../../stuff/css/global.css">
+    <link rel="stylesheet" href="../../stuff/css/signin.css">
+</head>
+<body>
+
+<!--  Use jQuery load function to fulfill "#my-header"  -->
+<div id="my-header" data-header-type="sign-header"></div>
+
+<div class="container">
+    <form id="signin-form" class="form-signin" role="form" method="post" action="/survey/search/UserSignIn">
+        <h2 class="form-signin-heading">登录</h2>
+        <label id="warning-title-label"></label>
+        <input name="email" type="email" class="form-control" placeholder="Email" required autofocus>
+        <input name="password" type="password" class="form-control" placeholder="Password" required>
+
+        <div>
+            <label class="checkbox">
+                <input name="remember-me" type="checkbox" value="true" checked> 记住我7天
+            </label>
+            <a href="#">
+                <small>忘记密码？</small>
+            </a>
+        </div>
+        <button class="btn btn-lg btn-success btn-block" type="submit">登录</button>
+        <a href="/survey/user/signup" class="btn btn-lg btn-primary btn-block">注册</a>
+    </form>
+</div>
+<!-- /container -->
+
+<!--  Use jQuery load function to fulfill "#my-footer"  -->
+<div id="my-footer"></div>
+
+<!--  jQuery  -->
+<script src="../../stuff/libs/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="../../stuff/libs/jquery-plugin/jquery.cookie.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../stuff/libs/bootstrap/js/bootstrap.min.js"></script>
+<!--  my own script  -->
+<script src="../../stuff/script/global.js"></script>
+<script src="../../stuff/script/signin.js"></script>
+</body>
+</html>

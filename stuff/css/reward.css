@@ -1,0 +1,59 @@
+a.collapse-up-down {
+    float: right;
+}
+
+div.ticket-img{
+    margin: 3px;
+    width: 160px;
+    float: left;
+    //border-style: dotted;
+}
+div.ticket-img>div>img{
+    width: 150px;
+}
+
+div.ticket-img>div>div>h3,
+div.ticket-img>div>div>p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+div.ticket-img>div>div>h3{
+    font-size: 20px;
+}
+
+div.ticket-img>div>div>h3:hover,
+div.ticket-img>div>div>p:hover{
+    overflow:visible;
+}
+
+
+div#my-discount-ticket-panel{
+}
+div#my-discount-ticket-panel>div{
+    padding: 0;
+    margin: 5px;
+}
+
+div#reward-stuffs-category {
+    margin-top: 60px;
+}
+
+div#reward-stuffs-show-box {
+    //border-style: dashed;
+}
+
+div#view-by-price-nav {
+    //border-style: dashed;
+    margin-bottom: 20px;
+}
+
+div#view-by-price-nav>ul{
+    //border-style: dotted;
+}
+
+li.navbar-brand{
+    line-height: 10px;
+}
+

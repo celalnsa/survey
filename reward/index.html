@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>奖励</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../stuff/img/myview.ico">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="../stuff/libs/bootstrap/css/bootstrap.min.css">
+    <!--  my own style  -->
+    <link rel="stylesheet" href="../stuff/css/global.css">
+    <link rel="stylesheet" href="../stuff/css/reward.css">
+</head>
+<body>
+<!--  Use jQuery load function to fulfill "#my-header"  -->
+<div id="my-header"></div>
+
+<div class="container">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h4 class="panel-title">分文集市</h4>
+        </div>
+        <div class="panel-body">
+            <p class="text-info">我的分文:<strong>500</strong>.</p>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        我的折扣券
+                        <a id="my-discount-ticket-up-down" class="collapse-up-down" data-toggle="collapse"
+                           href="#my-discount-ticket-panel">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="my-discount-ticket-panel" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <div id="discount-ticket-img-row">
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/discounts/ticket1.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>金玉良缘</h3>
+
+                                        <p>玉器减50分文。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/discounts/ticket2.png" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>米兰装饰</h3>
+
+                                        <p>米兰装饰减200分文。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/discounts/ticket3.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>NALA</h3>
+
+                                        <p>NALA服饰减20分文。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/discounts/ticket4.png" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>麦当劳</h3>
+
+                                        <p>麦当劳减50分文。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/discounts/ticket5.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>德克士</h3>
+
+                                        <p>德克士减100分文。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="my-discount-ticket-down-clearfix" class="clearfix"></div>
+                        <div class="text-center">
+                            <ul class="pagination">
+                                <li class="disabled"><span>&laquo;</span></li>
+                                <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div id="reward-stuffs-category" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">物品分类</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <a class="list-group-item active" href="#">全部分类</a>
+                            <a class="list-group-item" href="#">数码电子</a>
+                            <a class="list-group-item" href="#">日用家居</a>
+                            <a class="list-group-item" href="#">母婴用品</a>
+                            <a class="list-group-item" href="#">皮具箱包</a>
+                            <a class="list-group-item" href="#">户外运动</a>
+                            <a class="list-group-item" href="#">办公文具</a>
+                            <a class="list-group-item" href="#">汽车用品</a>
+                            <a class="list-group-item" href="#">门票礼品</a>
+                            <a class="list-group-item" href="#">餐饮连锁</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="reward-stuffs-show-box">
+                    <div id="view-by-price-nav">
+                        <ul class="nav nav-pills">
+                            <li class="navbar-brand text-primary">按分文浏览：</li>
+                            <li class="active"><a href="#">全部</a></li>
+                            <li><a href="#">0-1000</a></li>
+                            <li><a href="#">1000-2000</a></li>
+                            <li><a href="#">2000-5000</a></li>
+                            <li><a href="#">5000+</a></li>
+                        </ul>
+                    </div>
+                    <div id="reward-stuffs-box">
+                        <div id="reward-stuffs-img-row">
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff1.jpg" alt="1" class="img-rounded">
+                                    </a>
+                                    <div class="caption text-center">
+                                        <h3>NIVEA男士</h3>
+                                        <p>NIVEA男士洗护套装试用</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff2.jpg" alt="1" class="img-rounded">
+                                    </a>
+                                    <div class="caption text-center">
+                                        <h3>相机三脚架</h3>
+                                        <p>结实的三脚架，让你爱上摆拍</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff3.jpg" alt="1" class="img-rounded">
+                                    </a>
+                                    <div class="caption text-center">
+                                        <h3>耳机</h3>
+                                        <p>疯狂的耳机</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff4.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>CHANEL28</h3>
+
+                                        <p>还有什么比香水对女人来说更重要</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff5.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>Nikon超级单反</h3>
+
+                                        <p>慎入！玩单反穷三代</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff6.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>闺女牌胭脂盒</h3>
+
+                                        <p>老上海的妹子必备</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff7.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>红花瓷碗</h3>
+
+                                        <p>就只是一个碗，丐帮祖传</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff8.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>Logitech鼠标</h3>
+
+                                        <p>鼠标手爱德华</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff9.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>可口可乐</h3>
+
+                                        <p>新增随机出现的歌词</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-img">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img src="../stuff/img/rewards/stuff10.jpg" alt="1" class="img-rounded">
+                                    </a>
+
+                                    <div class="caption text-center">
+                                        <h3>Stuff</h3>
+
+                                        <p>Nothing.</p>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        </button>
+                                        <button class="btn btn-default">
+                                            <span class="glyphicon glyphicon-star-empty"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="reward-stuffs-down-clearfix" class="clearfix"></div>
+                        <div class="text-center">
+                            <ul class="pagination">
+                                <li class="disabled"><span>&laquo;</span></li>
+                                <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!--  Use jQuery load function to fulfill "#my-footer"  -->
+<div id="my-footer"></div>
+
+<!--  jQuery  -->
+<script src="../stuff/libs/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="../stuff/libs/jquery-plugin/jquery.cookie.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../stuff/libs/bootstrap/js/bootstrap.min.js"></script>
+<!--  my own script  -->
+<script src="../stuff/script/global.js"></script>
+<script src="../stuff/script/reward.js"></script>
+</body>
+</html>

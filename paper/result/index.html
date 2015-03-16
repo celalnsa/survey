@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>结果</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../stuff/img/myview.ico">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="../../stuff/libs/bootstrap/css/bootstrap.min.css">
+    <!--  my own style  -->
+    <link rel="stylesheet" href="../../stuff/css/global.css">
+    <link rel="stylesheet" href="../../stuff/css/result.css">
+</head>
+<body>
+<!--  Use jQuery load function to fulfill "#my-header"  -->
+<div id="my-header"></div>
+
+<div class="container">
+    <div class="panel panel-info text-info">
+        <div class="panel-heading">
+            <h4 class="panel-title">问卷标题</h4>
+        </div>
+        <div class="panel-body text-center">
+            <p>已发布<strong>25</strong>天，已搜集到问卷<strong>112</strong>份。</p>
+            <div class="btn-group">
+            <button class="btn btn-danger">停止搜集</button>
+                <a class="jiathis_button_print btn btn-primary">打印结果</a>
+                <a class="jiathis_button_pdfonline btn btn-success">转换PDF</a>
+            </div>
+        </div>
+        <div class="survey-content">
+            <div class="survey-questions">
+                <div class="survey-one-question">
+                    <div class="panel panel-success question-type-single-selection">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">您最常使用的浏览器是？</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div id="result-chart-question1"></div>
+                            <div id="result-table-question1">
+                                <table class="table table-hover table-bordered table-striped table-responsive">
+                                    <caption class="strong">您最常使用的浏览器是？</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>选项</th>
+                                            <th>选中次数</th>
+                                            <th>百分比</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Firefox</td>
+                                            <td>55</td>
+                                            <td>41.4%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>IE</td>
+                                            <td>36</td>
+                                            <td>27.1%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Chrome</td>
+                                            <td>18</td>
+                                            <td>13.5%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Safari</td>
+                                            <td>12</td>
+                                            <td>9.0%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Opera</td>
+                                            <td>9</td>
+                                            <td>6.8%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Others</td>
+                                            <td>3</td>
+                                            <td>2.3%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="survey-one-question">
+                    <div class="panel panel-success question-type-multi-selection">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">世界上最大的城市是？</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div id="result-chart-question2"></div>
+                            <div id="result-table-question2">
+                                <table class="table table-hover table-bordered table-striped table-responsive">
+                                    <caption class="strong">世界上最大的城市是？</caption>
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>选项</th>
+                                        <th>选中次数</th>
+                                        <th>百分比</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Tokyo</td>
+                                        <td>45</td>
+                                        <td>33.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jakarta</td>
+                                        <td>26</td>
+                                        <td>19.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>New York</td>
+                                        <td>69</td>
+                                        <td>51.9%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Seoul</td>
+                                        <td>8</td>
+                                        <td>6.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Manila</td>
+                                        <td>58</td>
+                                        <td>43.6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Mumbai</td>
+                                        <td>0</td>
+                                        <td>0%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="survey-one-question">
+                    <div class="panel panel-success question-type-range">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">食堂的卫生情况打分</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div id="result-chart-question3"></div>
+                            <div id="result-table-question3">
+                                <table class="table table-hover table-bordered table-striped table-responsive">
+                                    <caption class="strong">食堂的卫生情况打分</caption>
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>分值</th>
+                                        <th>人数</th>
+                                        <th>百分比</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>8</td>
+                                        <td>6.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>20</td>
+                                        <td>15.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>10</td>
+                                        <td>7.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>3</td>
+                                        <td>60</td>
+                                        <td>45.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>4</td>
+                                        <td>33</td>
+                                        <td>24.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>1.5%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="survey-one-question">
+                    <div class="panel panel-success question-type-true-false">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">你幸福吗？</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div id="result-chart-question4"></div>
+                            <div id="result-table-question4">
+                                <table class="table table-hover table-bordered table-striped table-responsive">
+                                    <caption class="strong">你幸福吗？</caption>
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>选项</th>
+                                        <th>选中次数</th>
+                                        <th>百分比</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>是</td>
+                                        <td>35</td>
+                                        <td>26.3%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>否</td>
+                                        <td>98</td>
+                                        <td>73.7%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="survey-one-question">
+                    <div class="panel panel-success question-type-sort">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">学习英语难度项排序</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div id="result-chart-question5"></div>
+                            <div id="result-table-question5">
+                                <table class="table table-hover table-bordered table-striped table-responsive">
+                                    <caption class="strong">学习英语难度项排序</caption>
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>选项</th>
+                                        <th>第一位</th>
+                                        <th>第二位</th>
+                                        <th>第三位</th>
+                                        <th>第四位</th>
+                                        <th>第五位</th>
+                                        <th>第六位</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>语法</td>
+                                        <td>12</td>
+                                        <td>18</td>
+                                        <td>26</td>
+                                        <td>22</td>
+                                        <td>32</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>词汇</td>
+                                        <td>22</td>
+                                        <td>26</td>
+                                        <td>18</td>
+                                        <td>22</td>
+                                        <td>28</td>
+                                        <td>17</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>口语</td>
+                                        <td>24</td>
+                                        <td>9</td>
+                                        <td>22</td>
+                                        <td>34</td>
+                                        <td>16</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>听力</td>
+                                        <td>30</td>
+                                        <td>35</td>
+                                        <td>23</td>
+                                        <td>11</td>
+                                        <td>18</td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>阅读</td>
+                                        <td>12</td>
+                                        <td>33</td>
+                                        <td>2</td>
+                                        <td>32</td>
+                                        <td>27</td>
+                                        <td>27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>写作</td>
+                                        <td>33</td>
+                                        <td>12</td>
+                                        <td>42</td>
+                                        <td>12</td>
+                                        <td>12</td>
+                                        <td>22</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="survey-one-question">
+                    <div class="panel panel-success question-type-text">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">请写出您对“古来万事东流水”的感想</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div id="result-chart-question6"></div>
+                            <div id="result-table-question6">
+                                <table class="table table-hover table-bordered table-striped table-responsive">
+                                    <caption class="strong">请写出您对“古来万事东流水”的感想</caption>
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>答案</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>无感想</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>无</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>古代的事情就像向东的流水一样。</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>从古所有事情都是不短逝去，没有一件事物是一成不变的。</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Use jQuery load function to fulfill "#my-footer"  -->
+<div id="my-footer"></div>
+
+<!--  jQuery  -->
+<script src="../../stuff/libs/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="../../stuff/libs/jquery-plugin/jquery.cookie.js"></script>
+<script src="../../stuff/libs/highcharts-3.0.10/js/highcharts-all.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../stuff/libs/bootstrap/js/bootstrap.min.js"></script>
+<!--  my own script  -->
+<script src="../../stuff/script/global.js"></script>
+<script src="../../stuff/script/result.js"></script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<script>
+    $(function(){
+        var chartQuestion = [];
+        var optionQuestion1 = ['Firefox','IE','Chrome','Safari','Opera','Others'];
+        var seriesQuestion1 = [{data:[55, 36, 18, 12, 9, 3]}];
+        chartQuestion.push(High.drawChart.singleSelection(
+                'result-chart-question1',
+                '您最常使用的浏览器是？',
+                optionQuestion1,
+                seriesQuestion1
+        ));
+        var optionQuestion2 = ['Tokyo','Jakarta','New York','Seoul','Manila','Mumbai'];
+        var seriesQuestion2 = [{data:[45, 26, 69, 8, 58, 0]}];
+        chartQuestion.push(High.drawChart.multiSelection(
+                'result-chart-question2',
+                '世界上最大的城市是？',
+                optionQuestion2,
+                seriesQuestion2
+        ));
+        var optionQuestion3 = ['0','1','2','3','4','5'];
+        var seriesQuestion3 = [{data:[8,20,10,60,33,2]}];
+        chartQuestion.push(High.drawChart.range(
+                'result-chart-question3',
+                '食堂卫生情况打分',
+                optionQuestion3,
+                seriesQuestion3
+        ));
+        chartQuestion.push(High.drawChart.trueFalse(
+                'result-chart-question4',
+                '你幸福吗？',
+                35,
+                98
+        ));
+        var optionQuestion5 = ['语法','词汇','口语','听力','阅读','写作'];
+        var seriesQuestion5 = [];
+        seriesQuestion5.push({
+            name:'第一位',
+            data:[12,22,24,30,12,33]
+        });
+        seriesQuestion5.push({
+            name:'第二位',
+            data:[18,26,9,35,33,12]
+        });
+        seriesQuestion5.push({
+            name:'第三位',
+            data:[26,18,22,23,2,42]
+        });
+        seriesQuestion5.push({
+            name:'第四位',
+            data:[22,22,34,11,32,12]
+        });
+        seriesQuestion5.push({
+            name:'第五位',
+            data:[32,23,16,18,27,12]
+        });
+        seriesQuestion5.push({
+            name:'第六位',
+            data:[23,17,28,16,27,22]
+        });
+        chartQuestion.push(High.drawChart.sort(
+                'result-chart-question5',
+                '学英语难度排序',
+                optionQuestion5,
+                seriesQuestion5
+        ));
+    });
+</script>
+</body>
+</html>

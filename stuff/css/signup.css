@@ -1,0 +1,66 @@
+body {
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.form-signup {
+    max-width: 500px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signup label{
+    //border-style: solid;
+}
+.form-signup .form-signup-heading {
+    //border-style: dashed;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.form-signup .form-control {
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signup .form-control:focus {
+    z-index: 2;
+}
+
+.form-signup .form-group{
+    //border-style: solid;
+    margin-bottom: 5px;
+}
+
+.form-signup .form-group .control-label{
+    text-align: right;
+    margin-top: 5px;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: normal;
+    //border-style: groove;
+}
+
+.form-signup span{
+    //border-style: dotted;
+    margin-top: 0px;
+}
+
+
+.form-signup input{
+    //border-style: dashed;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.form-signup .form-group .checkbox{
+    //border-style: solid;
+}
+
+.form-signup .form-group input[type='checkbox']{
+    margin-top: 4px;
+}

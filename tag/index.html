@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>牌子</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../stuff/img/myview.ico">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="../stuff/libs/bootstrap/css/bootstrap.min.css">
+    <!--  my own style  -->
+    <link rel="stylesheet" href="../stuff/css/global.css">
+    <link rel="stylesheet" href="../stuff/css/tag.css">
+</head>
+<body>
+<!--  Use jQuery load function to fulfill "#my-header"  -->
+<div id="my-header"></div>
+
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                牌子
+                <a href="#" id="create-tag-link">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </h4>
+
+        </div>
+        <div class="panel-body">
+            <div id="user-tags-box" class="panel panel-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        我的发言牌子
+                        <a id="my-speak-rights-up-down" class="collapse-up-down" data-toggle="collapse"
+                           href="#my-speak-rights-panel">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="my-speak-rights-panel" class="panel-collapse collapse in">
+                    <div id="user-speak-rights" class="panel-body">
+                        <button id="button-edit-tag-box" type="button" class="btn btn-default">
+                            <span class="text-info glyphicon glyphicon-pencil"></span>
+                        </button>
+                    </div>
+                    <div id="my-speak-rights-clearfix-up" class="clearfix"></div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-info">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-minus-sign"></span>
+                            </button>
+                            <strong>高等数学</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-info">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-minus-sign"></span>
+                            </button>
+                            <strong>英语四级</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-info">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-minus-sign"></span>
+                            </button>
+                            <strong>普通物理</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-info">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-minus-sign"></span>
+                            </button>
+                            <strong>信息论</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-info">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-minus-sign"></span>
+                            </button>
+                            <strong>京剧</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-info">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-minus-sign"></span>
+                            </button>
+                            <strong>戏曲</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-warning">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </button>
+                            <strong>工业设计</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-warning">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </button>
+                            <strong>艺术</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-warning">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </button>
+                            <strong>MJ</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-warning">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </button>
+                            <strong>乒乓球</strong>
+                        </div>
+                    </div>
+                    <div class="tag-box col-lg-2 col-sm-4">
+                        <div class="alert alert-warning">
+                            <button type="button" class="close">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                            </button>
+                            <strong>Java</strong>
+                        </div>
+                    </div>
+
+
+                    <div id="my-speak-rights-clearfix-down" class="clearfix"></div>
+                    <div class="text-center">
+                        <ul class="pagination">
+                            <li class="disabled"><span>&laquo;</span></li>
+                            <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="all-tags-box" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        所有发言牌子
+                        <a id="all-speak-tags-up-down" class="collapse-up-down" data-toggle="collapse"
+                           href="#all-speak-tags-panel">
+                            <span class="glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                    </h4>
+                </div>
+                <div id="all-speak-tags-panel" class="panel-collapse collapse in">
+                    <div class="panel-body text-center">
+                        <form class="form-inline" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" required>
+                            </div>
+                            <button type="submit" class="btn btn-default">
+                                <span class="text-info glyphicon glyphicon-search"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <table class="table table-bordered table-responsive table-hover">
+                            <thead>
+                            <tr>
+                                <th>牌号</th>
+                                <th>名称</th>
+                                <th>创建者</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2599</td>
+                                <td>MJ</td>
+                                <td>High</td>
+                                <td><a href="/survey/paper/fillin/?paperId=4">获得</a></td>
+                            </tr>
+                            <tr>
+                                <td>2600</td>
+                                <td>物理</td>
+                                <td>何金海</td>
+                                <td><a href="/survey/paper/fillin/?paperId=3">获得</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center">
+                        <ul class="pagination">
+                            <li class="disabled"><span>&laquo;</span></li>
+                            <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Use jQuery load function to fulfill "#my-footer"  -->
+<div id="my-footer"></div>
+
+<!--  jQuery  -->
+<script src="../stuff/libs/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="../stuff/libs/jquery-plugin/jquery.cookie.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../stuff/libs/bootstrap/js/bootstrap.min.js"></script>
+<!--  my own script  -->
+<script src="../stuff/script/global.js"></script>
+<script src="../stuff/script/tag.js"></script>
+</body>
+</html>

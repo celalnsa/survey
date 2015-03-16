@@ -1,0 +1,11 @@
+textarea#msg-us-textarea{
+    max-width : 100%;
+    min-width : 100%;
+    max-height: 100px;
+    min-height: 100px;
+    margin: 10px 0;
+}
+
+div#msg-us-panel{
+    margin:10px;
+}

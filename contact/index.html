@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>联系我们</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../stuff/img/myview.ico">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="../stuff/libs/bootstrap/css/bootstrap.min.css">
+    <!--  my own style  -->
+    <link rel="stylesheet" href="../stuff/css/global.css">
+    <link rel="stylesheet" href="../stuff/css/contact.css">
+</head>
+<body>
+<!--  Use jQuery load function to fulfill "#my-header"  -->
+<div id="my-header"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">联系我们</h4>
+            </div>
+            <div class="panel-body text-center">
+                <address>
+                    <strong>我见&mdash;5See</strong><br>
+                    上海市，嘉定区，曹安公路，4800号<br>
+                    同济大学嘉定校区，8号楼，622室<br>
+                    <abbr title="联系电话">P:</abbr>18801790509
+                </address>
+
+                <address>
+                    <strong>联系邮箱</strong><br>
+                    <a href="mailto:admin@5see.com">admin@5see.com</a>
+                </address>
+            </div>
+            <div id="msg-us-panel" class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">发送私信给我们</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                        <textarea class="form-control" id="msg-us-textarea" placeholder="请在这里写下您想对我们说的话" required></textarea>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" type="submit">发送</button>
+                            <button class="btn btn-default" type="button">清除</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Use jQuery load function to fulfill "#my-footer"  -->
+<div id="my-footer"></div>
+
+<!--  jQuery  -->
+<script src="../stuff/libs/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="../stuff/libs/jquery-plugin/jquery.cookie.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../stuff/libs/bootstrap/js/bootstrap.min.js"></script>
+<!--  my own script  -->
+<script src="../stuff/script/global.js"></script>
+<script src="../stuff/script/about.js"></script>
+</body>
+</html>

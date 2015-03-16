@@ -1,0 +1,14 @@
+div.panel>dl{
+    margin: 20px;
+//border-style: dashed;
+}
+
+div.panel>dl>dt{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+div.panel>dl>dd>blockquote{
+    margin-bottom: 0px;
+//border-style: dotted;
+}

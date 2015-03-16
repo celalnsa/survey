@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../stuff/img/myview.ico">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="../../stuff/libs/bootstrap/css/bootstrap.min.css">
+    <!--  my own style  -->
+    <link rel="stylesheet" href="../../stuff/css/global.css">
+    <link rel="stylesheet" href="../../stuff/css/signup.css">
+</head>
+<body>
+<!--  Use jQuery load function to fulfill "#my-header"  -->
+<div id="my-header" data-header-type="sign-header"></div>
+
+<div class="container">
+    <form id="signup-form" class="form-horizontal form-signup" role="form" method="post"
+          action="/survey/create/UserRegister">
+        <h2 class="form-signup-heading">注册</h2>
+        <label></label>
+
+        <div class="form-group">
+            <label for="inputEmail" class="col-xs-4 control-label">邮箱：</label>
+
+            <div class="col-xs-8">
+                <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email" required
+                       autofocus>
+            </div>
+        </div>
+        <span id="email-caution" class="help-block col-xs-offset-4 col-xs-8 invisible">邮箱格式不正确.</span>
+
+        <div class="form-group">
+            <label for="inputPassword1" class="col-xs-4 control-label">密码：</label>
+
+            <div class="col-xs-8">
+                <input name="password" type="password" id="inputPassword1" class="form-control" placeholder="Password"
+                       required>
+            </div>
+        </div>
+        <span id="password-caution" class="help-block col-xs-offset-4 col-xs-8 invisible">密码至少6位.</span>
+
+        <div class="form-group">
+            <label for="inputPassword2" class="col-xs-4 control-label">确认密码：</label>
+
+            <div class="col-xs-8">
+                <input type="password" id="inputPassword2" class="form-control" placeholder="Password" required>
+            </div>
+        </div>
+        <span id="second-password-caution" class="help-block col-xs-offset-4 col-xs-8 invisible">两次输入密码不一致.</span>
+
+        <div class="clearfix"></div>
+        <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-8">
+                <label class="checkbox-inline">
+                    <input id="checkAgree" type="checkbox" value="agree-service-protocol"> 我同意
+                </label>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#service-protocol-modal">
+                    《我见服务协议》
+                </button>
+            </div>
+        </div>
+        <span id="protocol-caution" class="help-block col-xs-offset-4 col-xs-8 invisible">请确认我见服务协议.</span>
+        <label>&nbsp</label>
+        <!-- Button trigger modal -->
+        <button id="buttonSubmit" class="btn btn-lg btn-primary btn-block" type="submit">
+            提交
+        </button>
+
+    </form>
+</div>
+<!-- /container -->
+
+<!-- Modal -->
+<div class="modal fade" id="service-protocol-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myModalLabel">我见服务协议</h4>
+</div>
+<div class="modal-body">
+<p>请仔细阅读本协议。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;本协议旨在管理您和上海我见网络有限公司（以下简称“我见网络”）的关系。网络将在此条款下管理www.5See.com网站（底下简称“网站”）提供服务,服务的对象是指使用网站和服务的个人或企业（即用户）。本协议依据《中华人民共和国合同法》及有关法律、法规之规定。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;该服务协议，以及网站上不断更新的关于用户对网站使用或服务的其他条款、规则、政策或措施（即附加条款），以下统称为协议，我见网络将其作为和用户之间相互制约的合法协议。当您选择点击
+“我接受”按钮（或其他能表示你接受该协议的按钮）将意味着您同意并受其约束。若您对其中的任何一项条款不同意，请不要点击此按钮，这也意味着您将不能使用该网站的服务及网站中的任何信息。
+我见网络可能会对网站上的资料和服务进行修改，同时也可能会对该协议（包括其他附加条款）进行更改，但修改内容都会在修改之前在网站上进行公布或发邮件通知用户。
+若您对其中的任何一条修改不满意，可以停止使用该网站和服务，您也可以终止您的账户。若您没有停止使用该网站及其相关的服务则意味着您同意接受新的改动。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;1. 合法身份<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;同意接受该项协议的用户必须是合法的企业、其他合法机构用户或者合法个人。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;2. 服务和付款<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;2.1 用户选择了网站的付费服务，我见网络按照网站公布的收费标准同用户结算费用。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;2.2 用户支付费用后，可向我见网络申请发票，我见网络在10个工作日内寄出。发票金额低于人民币200元，需要支付5元的邮寄费用。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;3. 注册<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;若用户已经注册了账户使用相关服务，则用户需提供完整准确的注册信息，并及时更新。请注意，用户将对使用账户本身的一切活动负全责，不管用户本身是否有授权使用该活动。我见网络将对此不负任何责任。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;4. 资源<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;网站和相关服务所提供的材料和信息，包括文件、图表和图片等非用户自己的材料（统称为我见网络资源），这些资料由我见网络提供、版权、商标或贡献文献，只供个人使用，不可占为己有，不可转让，只能用于与网站和网站服务有关的个人活动。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;除了协议中有规定的外，用户没权修改、编辑、复制、改编、披露我见网络的资源。若用户违反了协议中的任意规定，我见网络有权自动终止该协议，不必提前通知。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;5. 用户信息<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;5.1 用户确认并同意<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(a)
+所有问卷的问题、信息、数据、文档、软件、音乐、声音文件、照片、图片、音像以及收集的数据等其他相关通过网站或网站服务进行交流、提交或传播的材料，不管这些材料是公开的还是保密的，是用户个人的还是参加调查的样本人群的，用户都将对这些材料负全部的责任。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(b) 用户将对所有的用户信息负全部责任，包括个人和参加调研人员上传、公布、发送邮件、发布、交流、传播等其他通过用户自己账户使用的服务，或由用户本身授权的其他活动。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(c)
+用户可能会在用户信息中将一些不合法、有害、威胁性、恶意中伤、带有攻击、侵权、诽谤、粗俗、侮辱、猥亵、攻击性的言语，或对第三方的隐私、怨恨或种族、伦理及其他有异议的情绪通过使用网站或网站服务暴露出来。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(d) 用户需授权我见网络不可撤销的、非专有的、无特权使用费的权利在世界范围内以运营网站和提供服务为目的使用用户信息，并有权以此目的为前提授权该项权利。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;5.2
+用户需确认并同意我见网络不控制用户自身的信息，收集的样本，或其他用户对网站和服务的使用，并且不保证该信息的准确完整和质量。我见网络可能但没有义务去审查用户的内容，阻止、修改或终止用户使用或删除用户信息，除非该我见网络发现违反了该协议中的任一条款。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;5.3 我见网络有权在自己的数据后台对用户信息进行不定时整理，且不必另行通知。用户需自行备份所有上传到网站或使用网站的一些信息。我见网络对用户信息的整理，删除或保留不负任何责任。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;5.4 我见网络有权终止用户账户和对网站及其服务的使用，并有权追回由于用户违反协议条款而造成的一切损失，破坏所产生的费用。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;6. 用户管理<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;关于用户对网站和网站服务的使用，在不限制用户在协议和相关法律条件下的其他职责，用户需遵守：<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(a) 该协议，包括我见网络反垃圾邮件协议和其他所有在网站上更新的条款。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(b)
+禁止上传、发布、发送或使用任何以下用户信息：1.非法的、有害、威胁性、恶意中伤、带有攻击、侵权、诽谤、粗俗、侮辱、猥亵、攻击性的言语或对第三方的隐私、怨恨或种族、伦理及其他有异议的信息。2.第三方任何专利、商标、商业机密、版权或其他知识产权的信息。3.受法律、合同或信托关系制约的相关信息（包括得到的内部信息，专业或机密消息，或泄露雇佣关系或保密协议）4.包含垃圾邮件、垃圾信息、传销或其他类似形式的教唆信息。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(c)
+禁止使用该网站或网站服务发送问卷，民意调查或其他相关材料给常住居民中的低于大多数年龄的少数人群（即未成年人），除非法律有规定允许或对该人群不会造成任何伤害。受当地或国际法律法规或条款关于儿童隐私，个人权利或其他保护未成年人的法规的制约的则不被允许。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(d) 禁止假冒其他个人或团体，包括我见网络或我见网络的任一机构，论坛领导，指导或主持，或错误描述或扭曲用户和其他个人或团体的附属关系。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(e)
+若用户使用网站服务来发送问卷，不要误导让收件人认为用户能将收集的问卷和个人邮箱地址关联起来，而事实上问卷中已说明用户没有这项功能（除非用户要求我见网络提供该项特殊服务）。若需要的话，我们建议用户的问卷上如果可以的话最好包含如下通知（或类似的语句）：请注意该项调查是实名的。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(f) 禁止妨碍或干扰网站或网站服务或与及有关的服务器或网络，或者违反与网站或网站服务有关的要求、程序、政策或条款。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(g) 根据我见网络的有关规定，禁止过度使用网站和网站服务，包括破坏网站运行速度，反映速度或其他网站的相关功能，或干扰其他用户对网站和网站服务的使用。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(h) 禁止以任意方式试图破坏或因拒绝服务而损坏，逆向使用等干扰网站和网站服务。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(i) 禁止上传、发布、发送邮件等破坏电脑、网站或其他服务操作的任意病毒或类似的破坏性程序。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(j) 禁止在和调研主题无关的留言板或新闻组或其他未经我见网络许可的网站发布问卷链接。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;我见网络可能会配合一些政府机构，对用户对网站和网站服务的使用进行调查，包括对一些违法行为的调查。根据政府机构调查的需要，在相关法律的指导下，我见网络可能会透露一些用户信息和其他与用户有关的，或与用户对网站和网站服务使用有关的内容。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;7. 用户赔偿<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;对于由用户下列行为所引起的投诉、控诉、债务和费用，用户必须赔偿，申辩而不致使我见网络及其附属机构，各机构总监、工作人员、员工、服务人员和代理机构蒙受损害。该行为包括：<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(a) 用户对网站和网站服务的使用及其获得的任何信息和材料，包括调研或民意调查结果或收集到的信息。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(b) 第三方对用户账户的使用（不管是否有经过用户本身授权决定）。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(c) 用户违反了该协议，包括用户对协议的表述和担保。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(d) 用户违反了相关法规。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;8. 终止<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;8.1 本协议在用户使用网站和网站服务即日起自动生效，直到协议终止。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;8.2 我见网络若取消用户的费用（若用户有的话）和自动终止协议，将会马上以通知的形式告知用户，以防用户违反该协议条件下或相关法律的表述，担保和义务（包括第5部分用户信息中所阐述的义务）。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;8.3 若我见网络严重地违反了该协议，且在接到用户书面形式通知后六天内无法解决，则客户有权自行取消注册费用，终止协议。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;8.4
+若因为任何原因造成该协议的终止，用户需即刻停止使用该网站和服务。请注意，我见网络有权采取合理的，必要的措施来阻止用户继续使用该网站和服务，甚至封锁用户的IP地址。在协议终止后，我见网络无义务保留用户信息（包括问卷，民意调查结果或收集的数据）或向用户提供一样的信息，但若必要也可有选择地保留。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;8.5 若是由于8.2中的下列行为而造成协议终止，则无权要求用户退回费用。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;9. 关于网站和网站服务的条款<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;9.1
+我见网络有权随时更改，或临时性或长久性地暂停或终止网站服务或用户的使用，以及修改，暂停或删除网站或其相关板块。对于极具负面影响的更改，我见网络将以合理的商业手段提前进行合理的通知，对此用户有权取消注册费用（若有的话）。我见网络对此将不对用户或任何第三方负任何责任。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;9.2
+除了9.1的限制外（关于网站和网站服务的条款），若用户过度使用网站和网站服务（如用户信息中5.6所述），则我见网络采取必要的措施进行阻止使得其他用户能恢复使用该网站和网站服务，包括限制或停止用户对其的使用或取消用户的注册并终止协议。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;9.3
+请注意网站和网站服务的提供是“即时”“有效”“允许有瑕疵”的，我见网络对于使用网站服务中所发生的丢失，删除，未能接收，处理或保存用户信息（包括问卷，民意调查结果和收集的相关数据）的行为不负任何责任。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;9.4 用户认识到网站和网站服务中包含或使用后得到的信息，软件，产品和服务可能会存在不准确性和不可避免的错误。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;9.5 用户必须自己判断在使用网站和网站服务中所得到信息的准确性，可靠性，完整性和有用性，我见网络对此不负任何责任。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;9.6 我见网络将不对以下行为提供交涉和保证：网站或网站服务的适合度、可靠性、有用性、及时性、质量、不含病毒或其他有害元件，以及这类信息、软件、产品和服务的准确性。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;9.7
+除非相关法律最大限度的许可，我见网络及其附属机构，各机构总监、工作人员、员工、服务人员和代理机构不认可一切关于信息、软件、产品和服务的担保，表述或隐藏的含义，包括对第三方不侵权的保证和目标适合性的默认担保。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;10. 权限和免责声明<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;10.1
+我见网络及其附属机构，各机构总监、工作人员、员工、服务人员和代理机构将不对和该协议有关的或由此引起的任何直接、间接、惩罚性、意外、特殊或衍生性损害等，包括由此所引起的利润、销售额、使用、数据、成本的损失负任何责任，不管该责任是否在合同，民事法律，严格的赔偿责任制和其他合法理论中有所表述，尽管我见网络对此损害已有过提醒。此外，还包括由以下行为而引起的损害：<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(a)网站或网站服务的使用或执行，提供信息的延迟和失败或无法使用。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(b)网站和网站服务中包含的，或由此而得到的所有信息、软件、产品或服务。请特别注意我见网络及其附属机构，各机构总监、工作人员、员工、服务人员和代理机构对于以下行为不负任何责任：<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(c)非法使用或更改任何传播资料或数据，通过网站或网站服务或由此得到的发送或未发送，接收或未接收的任何材料和数据，或任何交易。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(d)对他人或任何第三方的权利、知识产权造成威胁、诽谤、猥亵、攻击、破坏及非法的内容或产品。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(e)第三方使用网站或网站服务中的任何内容。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;若用户对网站和网站服务中的任何部分不满意，用户只允许终止该协议并停止使用。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;10.2
+尽管有上述的免责条件，若本协议或任意恢复理论中有要求的金额度，不管是否在合同，民事法律，严格的赔偿责任制等中有无表述，我见网络及其附属机构，各机构总监、工作人员、员工、服务人员和代理机构将对此进行偿付，但其金额不允许超过<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(a) 100.00元人民币。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(b) 根据协议要求我见网络收到的实际金额。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;若不受上述免责条款的制约，我见网络将无法提供网站或网站服务，即使该条款需要用户采取补偿办法或不能实现最初的目的。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;11. 知识产权<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;网站和网站服务及其所有的信息和截屏、包括文件、服务、网站设计、文本、图表、商标、图片和头像及其编排，版权所有归我见网络，其附属机构或第三方许可人。除了相关法规的要求和限制外、复制、传播、修改、转发或出版任何版权所有的材料是严令禁止的，除非有所有人或许可人的书面许可。我见网络对于没有特别说明授权的网站或网站服务拥有最终解释权。该协议禁止一切用户对该知识产权的分配和转让。用户请注意，我见网络的一切资源和用户通过服务所得到的其他内容将受到第三方知识产权的制约。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;12. 隐私条款<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;用户对网站的使用是受我见网络《隐私条款》的制约的，详细内容可以参考隐私条款的具体内容。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;用户需同意用户通过网站创建问卷后收集到的数据，我见网络会依照隐私条款进行使用。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;13. 总则<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;13.1
+我见网络会对第三方的网站提供参考，框架或超级链接，但不对第三方的网址及其内容进行审查、承认、支持或保证。对于第三方通过网站或其他方式所提供的任何产品和服务，我见网络对其不负任何责任，也不会对其表述支持或建议。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;13.2 用户本身需自己确定对其所使用的网站和网站服务适用的法律，以及在该法律条款下用户本身需承担的责任。我见网络对此不负任何责任。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;在本协议要求下，需由我见网络提供的一些通知和其他通信设备将会在如下规定的时间内提供：<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(a) 在网站上进行公布后。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(b) 以我见网络发送给用户邮件的最后一条时间记录为准。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;(c) 以我见网络寄发给客户的信件的最后一封的时间为准。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;用户可以发送邮件到 webmaster@idiaoyan.com 以通知我见网络。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;13.4
+该协议包含了用户和我见网络在网站和网站服务使用上的所有规定。除非在该协议中有特殊规定，用户和我见网络都不允许依赖或采取办法弥补他方规定的任何协议，担保，声明，阐述，理解或承诺，不管该机构是否有在本协议中提到过。<br>
+&nbsp;&nbsp; &nbsp;<br>
+&nbsp;&nbsp; &nbsp;13.5 措辞中的“包含”和“包括”和其他类似的词，不应该被认为也会限制其他可能包含的内容。<br>
+&nbsp;&nbsp;&nbsp;</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+    <button id="buttonAgree" type="button" class="btn btn-primary">同意</button>
+</div>
+</div>
+<!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<!--  Use jQuery load function to fulfill "#my-footer"  -->
+<div id="my-footer"></div>
+
+<!--  jQuery  -->
+<script src="../../stuff/libs/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="../../stuff/libs/jquery-plugin/jquery.cookie.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../stuff/libs/bootstrap/js/bootstrap.min.js"></script>
+<!--  my own script  -->
+<script src="../../stuff/script/global.js"></script>
+<script src="../../stuff/script/signup.js"></script>
+</body>
+</html>

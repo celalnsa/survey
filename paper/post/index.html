@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>搜集</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../stuff/img/myview.ico">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="../../stuff/libs/bootstrap/css/bootstrap.min.css">
+    <!--  my own style  -->
+    <link rel="stylesheet" href="../../stuff/css/global.css">
+    <link rel="stylesheet" href="../../stuff/css/postpaper.css">
+</head>
+<body>
+<!--  Use jQuery load function to fulfill "#my-header"  -->
+<div id="my-header"></div>
+
+<div class="container">
+    <div class="panel panel-info text-info">
+        <div class="panel-heading">
+            <h4 class="panel-title">问卷标题</h4>
+        </div>
+        <div class="panel-body text-center">
+            <p>已发布<strong>25</strong>天，已搜集到问卷<strong>112</strong>份。</p>
+
+            <div class="btn-group">
+                <button class="btn btn-danger">停止搜集</button>
+                <button class="btn btn-primary">修改问卷</button>
+                <a href="/survey/paper/result/?paperId=3" class="btn btn-info">结果</a>
+            </div>
+            <div class="clearfix"></div>
+            <div class="btn-group">
+                <button class="btn btn-default">发言牌子</button>
+                <button id="popover-rewards" class="btn btn-success" data-html="true" data-toggle="popover"
+                        data-placement="bottom"
+                        data-content="<div id='paper-reward-box'>
+                            <div class='input-group'>
+                                <span class='input-group-addon'>分文</span>
+                                <input type='text' class='form-control'>
+                            </div>
+                            <div class='text-center'>
+                                <div class='btn-group'>
+                                    <button class='btn btn-danger'>修改</button>
+                                    <button class='btn btn-primary'>保存</button>
+                                    <button id='btn-close-reward-box' class='btn btn-default'>关闭</button>
+                                </div>
+                            </div>
+                            <div class='panel panel-info'>
+                                <div class='panel-heading'>
+                                    <h4 class='panel-title'>折扣券
+                                        <a id='paper-discount-ticket-up-down' class='collapse-up-down' data-toggle='collapse'
+                                        href='#paper-discount-ticket-panel'>
+                                        <span class='glyphicon glyphicon-chevron-down'></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id='paper-discount-ticket-panel' class='panel-collapse collapse'>
+                                    <div class='panel-body'>
+                                        <div class='ticket-img'>
+                                            <div class='thumbnail'>
+                                                <a href='#'>
+                                                    <img src='../../stuff/img/discounts/ticket0.png' class='img-rounded'>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='caption text-center'>
+                                        <h3>Ticket.</h3>
+                                        <p>Nothing.</p>
+                                    </div>
+                                    <div class='text-center'>
+                                        <div class='btn-group'>
+                                            <button class='btn btn-danger'>修改</button>
+                                            <button class='btn btn-primary'>保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='panel panel-danger'>
+                                <div class='panel-heading'>
+                                    <h4 class='panel-title'>抽奖
+                                        <a id='paper-lottery-up-down' class='collapse-up-down' data-toggle='collapse'
+                                        href='#paper-lottery-panel'>
+                                        <span class='glyphicon glyphicon-chevron-down'></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id='paper-lottery-panel' class='panel-collapse collapse'>
+                                    <div class='panel-body'>
+                                        <div class='ticket-img'>
+                                            <div class='thumbnail'>
+                                                <a href='#'>
+                                                    <img src='../../stuff/img/lotteries/lottery0.png' class='img-rounded'>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='caption text-center'>
+                                        <h3>Lottery.</h3>
+                                        <p>Nothing.</p>
+                                    </div>
+                                    <div class='text-center'>
+                                        <div class='btn-group'>
+                                            <button class='btn btn-danger'>修改</button>
+                                            <button class='btn btn-primary'>保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>"
+                        data-title="每份问卷奖励" data-container="body">
+                    奖励
+                </button>
+            </div>
+        </div>
+        <div class="panel panel-success text-success">
+            <div class="panel-heading">
+                <h6 class="panel-title">社交平台分享</h6>
+            </div>
+            <div class="panel-body text-center">
+                <p>从下方选择分享本问卷的社交平台</p>
+            </div>
+            <!--  share tools are defined in sharepaper.js  -->
+            <div id="SNS-share-buttons"></div>
+        </div>
+        <div class="panel panel-success text-success">
+            <div class="panel-heading">
+                <h6 class="panel-title">问卷访问链接</h6>
+            </div>
+            <div class="panel-body text-center">
+                <p>直接将问卷访问链接发送给受访人</p>
+            </div>
+            <div id="copy-paper-link-box" class="text-center">
+                <div id="copy-paper-link-text" class="copy-link-left">http://5see.com/survey/?paperId=1111111</div>
+                <div class="copy-button-right">
+                    <button id="copy-paper-link-button" type="button" class="btn btn-success">复制</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--  Use jQuery load function to fulfill "#my-footer"  -->
+<div id="my-footer"></div>
+
+<!--  jQuery  -->
+<script src="../../stuff/libs/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="../../stuff/libs/jquery-plugin/jquery.cookie.js"></script>
+<script src="../../stuff/libs/jquery-plugin/jquery.zclip.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../stuff/libs/bootstrap/js/bootstrap.min.js"></script>
+<!--  my own script  -->
+<script src="../../stuff/script/global.js"></script>
+<script src="../../stuff/script/sharepaper.js"></script>
+<script src="../../stuff/script/postpaper.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>问卷广场</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../stuff/img/myview.ico">
+    <!--  Bootstrap  -->
+    <link rel="stylesheet" href="../stuff/libs/bootstrap/css/bootstrap.min.css">
+    <!--  my own style  -->
+    <link rel="stylesheet" href="../stuff/css/global.css">
+    <link rel="stylesheet" href="../stuff/css/paper.css">
+</head>
+<body>
+<!--  Use jQuery load function to fulfill "#my-header"  -->
+<div id="my-header"></div>
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                问卷广场
+                <a href="#" id="make-paper-link">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </a>
+            </h4>
+        </div>
+        <div id="survey-panel">
+            <div id="surveys" class="panel-body">
+                <div class="paper-tiny-window col-sm-4 col-lg-3">
+                    <div class="text-primary">
+                        <h3>公司福利调查</h3>
+                        <hr>
+                        <div class="text-overflow">
+                            本问卷旨在了解大家对公司福利的一些看法，采用匿名形式，并且您所填写的信息会进行严格保密。
+                        </div>
+                        <p><a class="btn btn-primary" role="button" href="#">查看详情 &raquo;</a></p>
+                    </div>
+                </div>
+                <div class="paper-tiny-window col-sm-4 col-lg-3">
+                    <div class="text-primary">
+                        <h3>离职员工满意度调查</h3>
+                        <hr>
+                        <div class="text-overflow">
+                            我们想在您离开我们公司前请求您完成以下问卷，希望通过您的意见和反馈使我们的公司进步。因此，我们希望您能真实而准确的反映您的想法。
+                        </div>
+                        <p><a class="btn btn-primary" role="button" href="#">查看详情 &raquo;</a></p>
+                    </div>
+                </div>
+                <div class="paper-tiny-window col-sm-4 col-lg-3">
+                    <div class="text-primary">
+                        <h3>会议策划调查</h3>
+                        <hr>
+                        <div class="text-overflow">
+                            在某些重要会议前做一下参会人员的参与调查，有助于会议开的更顺畅。
+                        </div>
+                        <p><a class="btn btn-primary" role="button" href="#">查看详情 &raquo;</a></p>
+                    </div>
+                </div>
+                <div class="paper-tiny-window col-sm-4 col-lg-3">
+                    <div class="text-primary">
+                        <h3>员工自我评估</h3>
+                        <hr>
+                        <div class="text-overflow">
+                            员工自我评估的目的，在于得到员工对他们的体现的自我见解。这是一个在整个绩效考的进程中给予员工发言机遇的强有力的要领。
+                        </div>
+                        <p><a class="btn btn-primary" role="button" href="#">查看详情 &raquo;</a></p>
+                    </div>
+                </div>
+                <div class="paper-tiny-window col-sm-4 col-lg-3">
+                    <div class="text-primary">
+                        <h3>企业员工满意度调查</h3>
+                        <hr>
+                        <div class="text-overflow">
+                            员工满意度调查收集员工对企业管理各个方面满意程度的信息，然后通过后续专业、科学的数据统计和分析，真实的反映公司经营管理现状，为企业管理者决策提供客观的参考依据。
+                        </div>
+                        <p><a class="btn btn-primary" role="button" href="#">查看详情 &raquo;</a></p>
+                    </div>
+                </div>
+                <div id="surveys-clearfix-down" class="clearfix"></div>
+                <div class="text-center">
+                    <ul class="pagination text-warning">
+                        <li class="disabled"><span>&laquo;</span></li>
+                        <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  Use jQuery load function to fulfill "#my-footer"  -->
+<div id="my-footer"></div>
+
+<!--  jQuery  -->
+<script src="../stuff/libs/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+<script src="../stuff/libs/jquery-plugin/jquery.cookie.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../stuff/libs/bootstrap/js/bootstrap.min.js"></script>
+<!--  my own script  -->
+<script src="../stuff/script/global.js"></script>
+<script src="../stuff/script/paper.js"></script>
+</body>
+</html>

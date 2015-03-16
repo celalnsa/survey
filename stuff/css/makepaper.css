@@ -1,0 +1,95 @@
+div.survey-welcome-banner{
+    margin-bottom: 10px;
+}
+
+div.survey-thanks-banner{
+    margin-top: 10px;
+}
+
+div#question-type-box{
+    margin: 0;
+}
+div.high-left-side>div>div.btn-group{
+    margin: 10px 0;
+}
+
+#survey-design-box>div.survey-content{
+    margin: 10px;
+}
+
+input[type="range"]{
+    //border-style: dotted;
+    margin-top: 10px;
+}
+
+textarea.form-control{
+    max-width : 100%;
+    min-width : 100%;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+div.survey-one-question {
+    border:1px solid #D6E9C6;
+    margin:20px 0;
+    padding: 10px;
+}
+
+div.question-content-title{
+    //border-style: dashed;
+}
+
+div.question-content-title>div.btn-group{
+    //border-style: dotted;
+}
+
+div.question-content-title>div.input-group{
+    //border-style: dotted;
+    height: 50px;
+}
+
+div.question-content-title>div.input-group>input[type="text"]{
+    font-size: 20px;
+    height: 50px;
+}
+
+div.question-content-body{
+    margin: 10px;
+}
+
+span.input-group-addon.btn-inside{
+    padding: 0;
+}
+
+span.input-group-addon>button.btn {
+    margin: -1px;
+    background-color: #ffffff;
+    border-color: #cccccc;
+}
+
+span.input-group-addon>button.btn:hover {
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+
+@media (min-width: 800px) {
+    div.high-left-side{
+        width: 200px;
+        position: fixed;
+    }
+    div.high-right-side{
+        width: auto;
+        margin-left: 220px;
+    }
+
+    div.question-content-title>div.btn-group{
+        float: right;
+        height: 50px;
+    }
+
+    div.question-content-title>div.btn-group>button{
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+    }
+}

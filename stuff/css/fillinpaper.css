@@ -1,0 +1,30 @@
+div.survey-content{
+    margin: 10px;
+}
+
+input[type="range"]{
+//border-style: dotted;
+    margin-top: 10px;
+}
+
+h4.paper-title{
+    line-height: 30px;
+    font-size: 20px;
+}
+
+div.panel-body.paper-summary{
+    margin: 10px;
+    background-color: #F3E3F8;
+}
+
+div.survey-welcome-banner{
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+textarea.form-control{
+     max-width : 100%;
+     min-width : 100%;
+     max-height: 100px;
+     min-height: 100px;
+}

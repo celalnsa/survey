@@ -1,0 +1,51 @@
+h4.panel-title>a {
+    float: right;
+}
+
+li.list-group-item{
+    border-left: hidden;
+    border-right: hidden;
+}
+
+#user-speak-rights div.btn-group{
+    margin-bottom: 20px;
+}
+
+#user-speak-rights div.tag-box{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.paper-tiny-window div.text-info{
+    color: #28898f;
+    border-color: #BCE8F1;
+}
+
+.paper-tiny-window button.text-info{
+    color: #BCE8F1;
+}
+
+.paper-tiny-window div.text-info,
+.paper-tiny-window div.text-primary {
+    padding: 20px;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.paper-tiny-window{
+    padding: 10px;
+}
+
+.paper-tiny-window div h3{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+div.text-overflow{
+    height: 60px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
